@@ -15,12 +15,12 @@ The LED(s) are connected on a breadboard with resistors and jumpers to the MSP43
 ## UART
 UART is set up on the G2553 to use a baud rate of 9600, no parity, 8 data bits and 1 stop bit. Data is expected in the following format in a transmission of n bytes:
 
-0th byte: the total number of bytes in the transmission, including this byte and the carriage return
-1st byte: duty cycle for red LED
-2nd byte: duty cycle for green LED
-3rd byte: duty cycle for blue LED
-4th to (n-1)th bute: duty cycle data for nodes further down the chain; will be transmitted exactly as received
-nth byte: carriage return (0x0D)
+- 0th byte: the total number of bytes in the transmission, including this byte and the carriage return
+- 1st byte: duty cycle for red LED
+- 2nd byte: duty cycle for green LED
+- 3rd byte: duty cycle for blue LED
+- 4th to (n-1)th bute: duty cycle data for nodes further down the chain; will be transmitted exactly as received
+- nth byte: carriage return (0x0D)
 
 The device will transmit data in the same format that it received data. In the new transmission that it will transmit, there will be three fewer bytes, meaning the first byte is the old first byte minus three.
 
