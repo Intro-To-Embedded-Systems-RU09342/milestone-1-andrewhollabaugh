@@ -1,0 +1,4 @@
+%You want to focus on each IC or block in your subsystem. So for Milestone 1, you might want to first talk about the procesor, and then in the next section talk about the LED and the driving circuitry. For each one of these, you actually should get pretty technical and aim for about a paragraph.
+
+The MSP430G2553 is a 16-bit, RISC-based microcontroller. In this project, it operates at 3.3V and has a clock frequency of 1 MHz. This processor is a good choice due to its low power consumption and its UART and PWM output capabilities. This device receives a string of bytes over UART, and interprets the string as a set of commands. It picks out the values for the three LED brightnesses, then sends the rest of the data to the next node. One the brightness values are known, it outputs three PWM signals, one for each LED channel, to the LEDs. The duty cycle of the wave, which determines the channel's brightness, is determined by an 8-bit value in transmission it receives.
+

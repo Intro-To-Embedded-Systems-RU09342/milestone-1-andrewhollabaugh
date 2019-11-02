@@ -1,0 +1,11 @@
+You can organize these as a table. This is meant to talk about the specifications which your system is capable of performing. I highly recommend looking up a \LaTeX table generator online.
+
+\begin{table}[]
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{PARAMETER} & \textbf{SPECIFICATIONS} & \textbf{DETAILS}                                                                                      \\ \hline
+Communication        & UART (serial)       & \begin{tabular}[l]{@{}c@{}}UART Serial communication is used with 8 data bits, \\1 stop bit, and 9600 baud rate. A stream of bytes is \\received, some of the bytes are used to control\\ the brightness of the leds, then it transmits the rest of the \\data to the next node.\end{tabular} \\ \hline
+LED Channels        & 3                    & \begin{tabular}[c]{@{}c@{}}The LED output channels go to each color\\ of the RGB led (red, green, and blue). \\Other colors could also be used.\end{tabular} \\ \hline
+\end{tabular}
+\end{table}

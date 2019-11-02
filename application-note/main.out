@@ -1,0 +1,23 @@
+\BOOKMARK [1][-]{section.1}{Design Overview}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Design Features}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Featured Applications}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Design Resources}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Block Diagram}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Board Image}{section.1}% 6
+\BOOKMARK [1][-]{section.2}{Key System Specifications}{}% 7
+\BOOKMARK [1][-]{section.3}{System Description}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Detailed Block Diagram}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Highlighted Devices}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.3}{Device/IC 1}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.4}{Device/IC 2}{section.3}% 12
+\BOOKMARK [1][-]{section.4}{SYSTEM DESIGN THEORY}{}% 13
+\BOOKMARK [2][-]{subsection.4.1}{Serial Communication}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.2}{PWM Signals}{section.4}% 15
+\BOOKMARK [1][-]{section.5}{Getting Started/How to use the device}{}% 16
+\BOOKMARK [1][-]{section.6}{Getting Started Software/Firmware}{}% 17
+\BOOKMARK [2][-]{subsection.6.1}{Hierarchy Chart}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.2}{Communicating with the Device}{section.6}% 19
+\BOOKMARK [1][-]{section.7}{Test Setup}{}% 20
+\BOOKMARK [1][-]{section.8}{Design Files}{}% 21
+\BOOKMARK [2][-]{subsection.8.1}{Schematics}{section.8}% 22
+\BOOKMARK [2][-]{subsection.8.2}{Bill of Materials}{section.8}% 23

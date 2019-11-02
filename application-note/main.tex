@@ -1,0 +1,163 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT TOUCH THIS PART
+\documentclass{hitec}
+\newcommand{\HT}{\textsc{\raisebox{0.1em}{h}\raisebox{-0.1em}{i}%
+	\raisebox{0.1em}{t}\raisebox{-0.1em}{e}\raisebox{0.1em}{c} }}
+	
+\usepackage[table,xcdraw]{xcolor}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% Enter the title of either the lab or some other title you think fits
+\title{RGB LED Node}
+
+% Place you team members here
+\author{Andrew Hollabaugh}
+
+
+
+
+\company{Rowan University}
+\confidential{\textbf{-- ECE 09.321: Milestone 1 --}}
+
+
+% Place the packages you want to use here.
+\usepackage{hyperref} % This line is readily ommited of it makes trouble
+\usepackage{graphicx}
+
+
+
+\begin{document}
+\maketitle
+\section{Design Overview}
+%As with normal lab reports, your application note should begin with an abstract talking about the overall experiment performed and what was achieved in the scope of this lab. Typically you want to limit this to about a paragraph, and you want to try to draw the reader into reading your work. Make sure you state the problem trying to be solved. You could also place an image of the project on this page if you want.
+
+This project is an RGB LED controller that can be used in a network of similar devices to create an individually-addressable RGB LED strip. An MSP430G2553 processor is used, on the MSP430G2ET development board. Three PWM pins on the processor are used for each channel of the RGB LED. UART serial communication is used for the nodes to receive commands.
+
+\subsection{Design Features}
+
+\input{DesignFeatures.tex}
+
+
+\subsection{Featured Applications}
+
+\input{FeaturedApplications.tex}
+
+
+\subsection{Design Resources}
+
+\input{DesignResources.tex}
+
+
+
+\subsection{Block Diagram}
+
+\input{BlockDiagram.tex}
+
+
+
+\subsection{Board Image}
+
+\input{BoardImage.tex}
+
+
+\section{Key System Specifications}
+
+\input{KeySystemSpecifications.tex}
+
+
+
+\section{System Description}
+
+\input{SystemDescription.tex}
+
+
+
+\subsection{Detailed Block Diagram}
+
+\input{DetailedBlockDiagram.tex}
+
+
+\subsection{Highlighted Devices}
+
+\input{HighlightedDevices.tex}
+
+
+
+\subsection{Device/IC 1}
+
+\input{DeviceIC1.tex}
+
+
+\subsection{Device/IC 2}
+
+\input{DeviceIC2.tex}
+
+
+
+\section{SYSTEM DESIGN THEORY}
+
+\input{SystemDesignTheory.tex}
+
+
+
+\subsection{Serial Communication}
+
+\input{DesignRequirement1.tex}
+
+
+\subsection{PWM Signals}
+
+\input{DesignRequirement2.tex}
+
+
+
+\section{Getting Started/How to use the device}
+
+\input{GettingStarted.tex}
+
+
+%\textbf{NOTE:} You will be choosing what subsections to include in here. I highly recommend looking at other examples from TI and other companies to see how they break up there documents.
+
+\section{Getting Started Software/Firmware}
+
+\input{GettingStartedSoftware.tex}
+
+
+\subsection{Hierarchy Chart}
+
+\includegraphics[scale=0.5]{hierarchical-diagram.png}
+
+\subsection{Communicating with the Device}
+
+Use a serial terminal to communicate with the node. First it must be connected using a USB-to-serial cable. Ensure the serial terminal is set to 9600 baud rate, and 8 data bits and 1 stop bit. Data is sent in the following format: first byte is number of total bytes in transmission, next three bytes are the R, G, and B values for the first node, the next any number of bytes (in multiples of three) is the R, G, and B values for nodes further down the line, and the last byte is a newline (0x0d).
+
+\section{Test Setup}
+Ensure the program is flashed onto the MSP430. Use a breadboard to connect the RGB LED to the three resistors. Use jumper cables to connect to the three pins on the MSP430. Use a USB-to-serial cable to connect the MSP430's UART to a computer. Use a serial terminal to connect to the processor, such as CuteCom, minicom, RealTerm, putty, etc. Send an example command, such as 05ffffff0d. This should set all three LEDs to full brightness, making the RGB LED appear white in its full brightness. To connect more nodes, connect the TX pin of the first node to the RX pin of the second. Also ensure they are both powered. Any hex values after the first four will specify brightnesses for the second node.
+
+%\subsection{Test Data}
+
+\section{Design Files}
+
+\subsection{Schematics}
+
+\includegraphics[scale=0.3]{detailed-block-diagram.png}
+
+\subsection{Bill of Materials}
+\begin{itemize}
+    \item MSP430G2553
+    \item RGB LED
+    \item 60 ohm, 1/4 watt resistor (3)
+\end{itemize}
+
+%\subsection{Layout Prints (if applicable)}
+
+%\subsection{Diptrace Project (if applicable)}
+
+%\subsection{Gerber Files (if applicable)}
+
+%\subsection{Assembly Drawings (if applicable)}
+
+\end{document}
+
